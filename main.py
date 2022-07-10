@@ -26,11 +26,11 @@ def print_menu():
 
 # 5. print menu and prompt user to make a selection
 print_menu()
-operation = int(input(('\nEnter Menu Selection: ')))
+operation = int(input('\nEnter Menu Selection: ')) # removed extra '()'
 
 
 # 6. if user inputs 1-6, prompt user to enter input a number
-while more_math == True:
+while more_math: # removed '== True' as it is useless
     if 1 <= operation <= 6:
         operand_1 = input('Enter first operand: ')
         operand_2 = input('Enter second operand: ')
@@ -58,7 +58,7 @@ while more_math == True:
         # 8. print the results of the calculation and reprint the menu
         print_menu()
         operation = int(input('\nEnter Menu Selection: '))
-        more_math = True
+         # more_math = True < -- unnecessary
 
         # 9. update all values for future calculations
         last_result = result
@@ -77,17 +77,17 @@ while more_math == True:
             print(f'Number of calculations: {num_of_calc}')
             print(f'Average of calculations: {(sum_of_calc / num_of_calc):.2f}\n')
             operation = int(input('Enter Menu Selection: '))
-            more_math = True
+            # more_math = True < -- unnecessary
         else:
             print('\nError: No calculations yet to average!\n')
             operation = int(input(('Enter Menu Selection: ')))
-            more_math = True
+            # more_math = True < -- unnecessary
 
     # print error message for an invalid selection
     else:
         print('\nError: Invalid selection!\n')
         operation = int(input(('Enter Menu Selection: ')))
-        more_math = True
+        # more_math = True < -- unnecessary
 
 
 
