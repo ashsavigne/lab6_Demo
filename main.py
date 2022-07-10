@@ -1,3 +1,5 @@
+# Ashley Savigne
+
 # 1. import math to use log function
 import math
 
